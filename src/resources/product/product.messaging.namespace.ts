@@ -17,4 +17,5 @@ export class ProductMessagingNamespace {
     sendRoomMessage<T>(message: IWebSocketMessageEvent<T>, room: Rooms) {
         this.nsp.to(room.toString()).emit(message.messageName, message.payLoad);
     }
+    
 }
